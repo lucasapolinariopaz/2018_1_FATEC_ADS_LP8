@@ -124,4 +124,10 @@
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add_insert_new_17850" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_insert_new_17850.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_insert_new_178501" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_insert_new_17850.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -100,6 +100,12 @@ namespace seguradora
 			ConsultaCarro novo = new ConsultaCarro();
 			novo.Show();
 		}
-	}
-    }
 
+        private void cADASTROToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_de_cliente novo = new Cadastro_de_cliente();
+            novo.Show();
+        }
+    }
+    }
+  

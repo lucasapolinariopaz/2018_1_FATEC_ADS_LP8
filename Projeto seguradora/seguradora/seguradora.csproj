@@ -67,6 +67,12 @@
     <Compile Include="Acidente.Designer.cs">
       <DependentUpon>Acidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro de cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro de cliente.Designer.cs">
+      <DependentUpon>Cadastro de cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Acidente.resx">
       <DependentUpon>Acidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro de cliente.resx">
+      <DependentUpon>Cadastro de cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCarro.resx">
       <DependentUpon>CadastroCarro.cs</DependentUpon>
@@ -149,6 +158,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

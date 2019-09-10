@@ -35,16 +35,16 @@ namespace seguradora
 				"cliente cli INNER JOIN carro car ON cli.cod_cli = car.cod_cli WHERE " +
 				"car.placa = '" + txt_consultaPlaca.Text + "';", conn);
 			comm.CommandType = CommandType.Text;
-			comm.Parameters.Add(new SqlParameter("@nome", "nome_cliente"));
-			comm.Parameters.Add(new SqlParameter("@data_nasc", "data_nasc_cliente"));
-			comm.Parameters.Add(new SqlParameter("@telefone", "telefone_cliente"));
-			comm.Parameters.Add(new SqlParameter("@endereco", "endereco_cliente"));
-			comm.Parameters.Add(new SqlParameter("@marca", "marca_carro"));
-			comm.Parameters.Add(new SqlParameter("@modelo", "modelo_carro"));
-			comm.Parameters.Add(new SqlParameter("@ano_fabricao", "anoFab_carro"));
-			comm.Parameters.Add(new SqlParameter("@ano_modelo", "anoMod_carro"));
-			comm.Parameters.Add(new SqlParameter("@placa", "placa_carro"));
-			comm.Parameters.Add(new SqlParameter("@cor", "cor_carro"));
+			comm.Parameters.Add(new SqlParameter("@nome", "nome"));
+			comm.Parameters.Add(new SqlParameter("@data_nasc", "data_nasc"));
+			comm.Parameters.Add(new SqlParameter("@telefone", "telefone"));
+			comm.Parameters.Add(new SqlParameter("@endereco", "endereco"));
+			comm.Parameters.Add(new SqlParameter("@marca", "marca"));
+			comm.Parameters.Add(new SqlParameter("@modelo", "modelo"));
+			comm.Parameters.Add(new SqlParameter("@ano_fabricao", "ano_fabricao"));
+			comm.Parameters.Add(new SqlParameter("@ano_modelo", "ano_modelo"));
+			comm.Parameters.Add(new SqlParameter("@placa", "placa"));
+			comm.Parameters.Add(new SqlParameter("@cor", "cor"));
 			comm.Parameters.Add(new SqlParameter("@chassi", "chassi_carro"));
 			comm.Parameters.Add(new SqlParameter("@cod_car", "cod_car"));
 
@@ -52,17 +52,17 @@ namespace seguradora
 			DbDataReader dr = comm.ExecuteReader();
 			while (dr.Read())
 			{
-				txt_nomeCliente.Text = dr["nome_cliente"].ToString();
-				txt_nascCliente.Text = dr["data_nasc_cliente"].ToString();
-				txt_telefoneCliente.Text = dr["telefone_cliente"].ToString();
-				txt_enderecoCliente.Text = dr["endereco_cliente"].ToString();
-				txt_marcaCarro.Text = dr["marca_carro"].ToString();
-				txt_modeloCarro.Text = dr["modelo_carro"].ToString();
-				txt_anoFabCarro.Text = dr["anoFab_carro"].ToString();
-				txt_anoModCarro.Text = dr["anoMod_carro"].ToString();
-				txt_placaCarro.Text = dr["placa_carro"].ToString();
-				txt_corCarro.Text = dr["cor_carro"].ToString();
-				txt_chassiCarro.Text = dr["chassi_carro"].ToString();
+				txt_nomeCliente.Text = dr["nome"].ToString();
+				txt_nascCliente.Text = dr["data_nasc"].ToString();
+				txt_telefoneCliente.Text = dr["telefone"].ToString();
+				txt_enderecoCliente.Text = dr["endereco"].ToString();
+				txt_marcaCarro.Text = dr["marca"].ToString();
+				txt_modeloCarro.Text = dr["modelo"].ToString();
+				txt_anoFabCarro.Text = dr["ano_fabricao"].ToString();
+				txt_anoModCarro.Text = dr["ano_modelo"].ToString();
+				txt_placaCarro.Text = dr["placa"].ToString();
+				txt_corCarro.Text = dr["cor"].ToString();
+				txt_chassiCarro.Text = dr["chassi"].ToString();
 				pk_car = int.Parse(dr["cod_car"].ToString());
 			}
 			Conexao.fecharConexao();
@@ -94,7 +94,8 @@ namespace seguradora
 			comm.Parameters.Add(new SqlParameter("@placa", txt_placaCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@cor", txt_corCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@chassi", txt_chassiCarro.Text));
-			comm.CommandType = CommandType.Text;
+            comm.Parameters.Add(new SqlParameter("@cod_car", int.Parse(txtcodcar.Text)));  
+            comm.CommandType = CommandType.Text;
 			Conexao.obterConexao();
 			try
 			{
@@ -111,5 +112,10 @@ namespace seguradora
 				Conexao.fecharConexao();
 			}
 		}
-	}
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
