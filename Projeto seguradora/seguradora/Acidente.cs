@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace seguradora
 {
     public partial class Acidente : Form
-    {           string strconn= "Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\seguradora\\seguradora.mdf;Integrated Security = True; User Instance = True";
+    {          // string strconn= "Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\seguradora\\seguradora.mdf;Integrated Security = True; User Instance = True";
 
         public Acidente()
         {
@@ -27,7 +27,8 @@ namespace seguradora
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(strconn);
+            //SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection conn = Conexao.obterConexao();
             SqlCommand comm = new SqlCommand("select * from carro where placa= '"+txtplaca.Text+ "';", conn);
             comm.CommandType = CommandType.Text; 
             comm.Parameters.Add(new SqlParameter("@modelo", "modelo"));
@@ -37,7 +38,7 @@ namespace seguradora
             comm.Parameters.Add(new SqlParameter("@cod_car", "cod_car"));
 
 
-            conn.Open();
+            Conexao.obterConexao();
             DbDataReader dr = comm.ExecuteReader();
             while (dr.Read())
             {
@@ -62,10 +63,11 @@ namespace seguradora
             string sql = "INSERT INTO acidente (cod_carro,local,data,hora,descricao) "
     + "VALUES ('" + txtchassi.Text +   "', '" + txtlocal.Text + "', '" + txtdata.Text + "', '" + txthora.Text + "', '" + txtdescricao+ "')";
 
-            SqlConnection con = new SqlConnection(strconn);
-            SqlCommand cmd = new SqlCommand(sql, con);
+            // SqlConnection con = new SqlConnection(strconn);
+            SqlConnection conn = Conexao.obterConexao();
+            SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
-            con.Open();
+            Conexao.obterConexao();
             try
             {
                 int i = cmd.ExecuteNonQuery();
@@ -78,7 +80,7 @@ namespace seguradora
             }
             finally
             {
-                con.Close();
+                Conexao.fecharConexao();
             }
         }
     }

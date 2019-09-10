@@ -14,8 +14,7 @@ namespace seguradora
 {
     public partial class Consulta_Acidente : Form
     { 
-        string strconn = "Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\seguradora\\seguradora.mdf;Integrated Security = True; User Instance = True";
-       
+          
         public Consulta_Acidente()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace seguradora
         
         private void btnbusca_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection conn = Conexao.obterConexao();
             SqlCommand comm = new SqlCommand("select c.modelo,c.marca,c.placa,c.ano_modelo,c.ano_fabricao," +
                 "c.chassi,a.local,a.cod_aci,a.descricao,a.hora, a.data from carro c, acidente a where a.cod_carro=c.cod_car and c.placa='" + txtplaca.Text + "';", conn);
             comm.CommandType = CommandType.Text;
@@ -40,7 +39,7 @@ namespace seguradora
             comm.Parameters.Add(new SqlParameter("@descricao", "descricao"));
 
 
-            conn.Open();
+            Conexao.obterConexao();
             DbDataReader dr = comm.ExecuteReader();
             while (dr.Read())
             {
@@ -56,7 +55,7 @@ namespace seguradora
                 txtdescricao.Text = dr["descricao"].ToString();
 
             }
-            conn.Close();
+            Conexao.fecharConexao();
 
         }
 
@@ -73,14 +72,14 @@ namespace seguradora
         private void btnsalvar_Click(object sender, EventArgs e)
         {
             string sql = "UPDATE acidente SET local=@local, data=@data, hora=@hora, descricao=@descricao ";
-            SqlConnection con = new SqlConnection(strconn);
-            SqlCommand comm = new SqlCommand(sql, con);
+            SqlConnection conn = Conexao.obterConexao();
+            SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.Add(new SqlParameter("@local", txtlocal.Text));
             comm.Parameters.Add(new SqlParameter("@data", txtdata.Text));
             comm.Parameters.Add(new SqlParameter("@hora", txthora.Text));
             comm.Parameters.Add(new SqlParameter("@descricao", txtdescricao.Text));
             comm.CommandType = CommandType.Text;
-            con.Open();
+            Conexao.obterConexao();
             try
             {
                 int i = comm.ExecuteNonQuery();
@@ -93,7 +92,7 @@ namespace seguradora
             }
             finally
             {
-                con.Close();
+                Conexao.fecharConexao();
             }
         }
 

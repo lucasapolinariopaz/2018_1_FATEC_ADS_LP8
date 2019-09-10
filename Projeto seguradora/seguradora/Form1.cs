@@ -21,17 +21,16 @@ namespace seguradora
         {
            
             bool result = false;
-            // String strConexao = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\cesar\\Desktop\\seguradora\\seguradora.mdf;Integrated Security=True;User Instance=True";
-            // conexao conexao = new conexao(strConexao);
-            string StringDeConexao = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\cesar\\Desktop\\seguradora\\seguradora.mdf;Integrated Security=True;User Instance=True";
-            using (SqlConnection cn = new SqlConnection())
+   
+           // string StringDeConexao = "Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\seguradora\\seguradora.mdf;Integrated Security=True;User Instance=True";
+            using (SqlConnection cn = Conexao.obterConexao())
             {
-                cn.ConnectionString = StringDeConexao;
+               // cn.ConnectionString = StringDeConexao;
                 try
                 {
 
             SqlCommand cmd = new SqlCommand("Select regi_corretor,senha from corretor where regi_corretor='" + txtnomeacesso.Text + "'and senha='"+txtkey.Text + "';", cn);
-                    cn.Open();
+                    Conexao.obterConexao();
                     SqlDataReader dados = cmd.ExecuteReader();
                     result = dados.HasRows;
                 }
@@ -39,7 +38,8 @@ namespace seguradora
                 {
                     MessageBox.Show(erro.Message);
                 }
-                 cn.Close(); }
+                Conexao.fecharConexao();
+            }
                 return result;
             
         }
@@ -68,6 +68,8 @@ namespace seguradora
         {
             txtkey.Clear();
             txtnomeacesso.Clear();
+            
+
         }
 
         private void cADASTRARToolStripMenuItem1_Click(object sender, EventArgs e)
