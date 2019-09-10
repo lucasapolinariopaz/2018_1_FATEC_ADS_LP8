@@ -27,12 +27,7 @@ namespace seguradora
         private void btnsalvar_Click(object sender, EventArgs e)
         {
          
-            string sql = "INSERT INTO cliente (nome, data_nasc, telefone, endereco)  VALUES ( @nome,@data_nasc,@endereco,@telefone)";
-
-
-
-
-                
+            string sql = "INSERT INTO cliente (nome, data_nasc, telefone, endereco)  VALUES ( @nome,@data_nasc,@endereco,@telefone)"; 
             SqlConnection conn = Conexao.obterConexao();
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.Add(new SqlParameter("@nome", txt_nomeCliente.Text));
@@ -55,6 +50,11 @@ namespace seguradora
             {
                 Conexao.fecharConexao();
             }
+        }
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

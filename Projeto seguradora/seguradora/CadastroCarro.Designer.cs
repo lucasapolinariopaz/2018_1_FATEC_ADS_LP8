@@ -81,7 +81,7 @@
             // 
             this.btn_consultaCliente.BackColor = System.Drawing.Color.Gray;
             this.btn_consultaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_consultaCliente.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consultaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_consultaCliente.ForeColor = System.Drawing.SystemColors.Info;
             this.btn_consultaCliente.Location = new System.Drawing.Point(515, 10);
             this.btn_consultaCliente.Name = "btn_consultaCliente";

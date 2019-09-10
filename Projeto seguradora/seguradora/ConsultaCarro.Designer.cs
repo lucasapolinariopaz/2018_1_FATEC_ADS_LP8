@@ -85,11 +85,11 @@
             // 
             this.btn_consultaPlaca.BackColor = System.Drawing.Color.Gray;
             this.btn_consultaPlaca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_consultaPlaca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consultaPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_consultaPlaca.ForeColor = System.Drawing.SystemColors.Info;
             this.btn_consultaPlaca.Location = new System.Drawing.Point(198, 6);
             this.btn_consultaPlaca.Name = "btn_consultaPlaca";
-            this.btn_consultaPlaca.Size = new System.Drawing.Size(94, 23);
+            this.btn_consultaPlaca.Size = new System.Drawing.Size(107, 23);
             this.btn_consultaPlaca.TabIndex = 3;
             this.btn_consultaPlaca.Text = "CONSULTAR";
             this.btn_consultaPlaca.UseVisualStyleBackColor = false;
