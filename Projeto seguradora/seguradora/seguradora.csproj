@@ -67,12 +67,24 @@
     <Compile Include="Acidente.Designer.cs">
       <DependentUpon>Acidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCarro.Designer.cs">
+      <DependentUpon>CadastroCarro.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexao.cs" />
     <Compile Include="Consulta Acidente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consulta Acidente.Designer.cs">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCarro.Designer.cs">
+      <DependentUpon>ConsultaCarro.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -85,8 +97,14 @@
     <EmbeddedResource Include="Acidente.resx">
       <DependentUpon>Acidente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCarro.resx">
+      <DependentUpon>CadastroCarro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta Acidente.resx">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCarro.resx">
+      <DependentUpon>ConsultaCarro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

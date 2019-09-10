@@ -88,6 +88,18 @@ namespace seguradora
            Consulta_Acidente  novo = new Consulta_Acidente();
             novo.Show();
         }
-    }
+
+		private void cADASTRARToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			CadastroCarro novo = new CadastroCarro();
+			novo.Show();
+		}
+
+		private void cONSULTASToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ConsultaCarro novo = new ConsultaCarro();
+			novo.Show();
+		}
+	}
     }
 

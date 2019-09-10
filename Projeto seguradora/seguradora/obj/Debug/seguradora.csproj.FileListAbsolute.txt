@@ -20,3 +20,17 @@ E:\seguradora\seguradora\obj\Debug\seguradora.Consulta_Acidente.resources
 E:\seguradora\seguradora\obj\Debug\seguradora.Form1.resources
 E:\seguradora\seguradora\obj\Debug\seguradora.Properties.Resources.resources
 E:\seguradora\seguradora\obj\Debug\seguradora.csproj.GenerateResource.Cache
+C:\seguradora v1.03\seguradora\seguradora\bin\Debug\seguradora.exe.config
+C:\seguradora v1.03\seguradora\seguradora\bin\Debug\seguradora.exe
+C:\seguradora v1.03\seguradora\seguradora\bin\Debug\seguradora.pdb
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.csprojAssemblyReference.cache
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.Acidente.resources
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.Consulta_Acidente.resources
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.Form1.resources
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.Properties.Resources.resources
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.csproj.GenerateResource.cache
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.csproj.CoreCompileInputs.cache
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.exe
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.pdb
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.CadastroCarro.resources
+C:\seguradora v1.03\seguradora\seguradora\obj\Debug\seguradora.ConsultaCarro.resources

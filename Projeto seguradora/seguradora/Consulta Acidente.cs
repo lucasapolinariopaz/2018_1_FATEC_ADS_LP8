@@ -41,7 +41,7 @@ namespace seguradora
 
             Conexao.obterConexao();
             DbDataReader dr = comm.ExecuteReader();
-            while (dr.Read())
+			while (dr.Read())
             {
                 txtmodelo.Text = dr["modelo"].ToString();
                 txtmarca.Text = dr["marca"].ToString();
@@ -71,13 +71,15 @@ namespace seguradora
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE acidente SET local=@local, data=@data, hora=@hora, descricao=@descricao ";
+            string sql = "UPDATE acidente SET local=@local, data=@data, hora=@hora," +
+				" descricao=@descricao WHERE cod_aci=@cod_aci;";
             SqlConnection conn = Conexao.obterConexao();
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.Add(new SqlParameter("@local", txtlocal.Text));
             comm.Parameters.Add(new SqlParameter("@data", txtdata.Text));
             comm.Parameters.Add(new SqlParameter("@hora", txthora.Text));
             comm.Parameters.Add(new SqlParameter("@descricao", txtdescricao.Text));
+			comm.Parameters.Add(new SqlParameter("@cod_aci", int.Parse(txtaci.Text)));
             comm.CommandType = CommandType.Text;
             Conexao.obterConexao();
             try
@@ -101,9 +103,5 @@ namespace seguradora
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-    }
+	}
     }
