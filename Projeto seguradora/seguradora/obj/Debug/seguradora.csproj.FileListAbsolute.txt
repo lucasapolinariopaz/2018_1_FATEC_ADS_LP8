@@ -1,0 +1,11 @@
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\bin\Debug\seguradora.exe.config
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\bin\Debug\seguradora.exe
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\bin\Debug\seguradora.pdb
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.Form1.resources
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.Properties.Resources.resources
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.csproj.GenerateResource.Cache
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.exe
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.pdb
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.Acidente.resources
+C:\Users\cesar\Documents\Visual Studio 2015\Projects\lista\seguradora\seguradora\obj\Debug\seguradora.Consulta_Acidente.resources
