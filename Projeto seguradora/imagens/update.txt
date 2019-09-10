@@ -1,0 +1,63 @@
+if (novo)
+  {
+     string sql = "INSERT INTO CLIENTE (NOME,ENDERECO,CEP,BAIRRO,CIDADE,UF,TELEFONE) " +
+     "VALUES (@Nome, @Endereco, @Cep, @Bairro, @Cidade, @Uf, @Telefone)";
+   
+     SqlConnection con = new SqlConnection(connectionString);
+     SqlCommand cmd = new SqlCommand(sql, con);
+     cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
+     cmd.Parameters.AddWithValue("@Endereco", txtEndereco.Text);
+     cmd.Parameters.AddWithValue("@Cep", mskCep.Text);
+     cmd.Parameters.AddWithValue("@Bairro", txtBairro.Text);
+     cmd.Parameters.AddWithValue("@Cidade", txtCidade.Text);
+     cmd.Parameters.AddWithValue("@Uf", txtUf.Text);
+     cmd.Parameters.AddWithValue("@Telefone", mskTelefone.Text);
+     cmd.CommandType = CommandType.Text;
+     con.Open();
+  
+     try
+     {
+        int i = cmd.ExecuteNonQuery();
+        if (i > 0)
+         MessageBox.Show("Registro incluido com sucesso!");
+     }
+     catch (Exception ex)
+     {
+        MessageBox.Show("Erro: " + ex.ToString());
+      }
+      finally
+      {
+         con.Close();
+      }
+   }
+   else
+   {
+     string sql = "UPDATE CLIENTE SET NOME=@Nome, ENDERECO=@Endereco, CEP=@Cep, BAIRRO=@Bairro, " +
+     "CIDADE=@Cidade, UF=@Uf, TELEFONE=@Telefone WHERE ID=@Id";
+     SqlConnection con = new SqlConnection(connectionString);
+     SqlCommand cmd = new SqlCommand(sql, con);
+    cmd.Parameters.AddWithValue("@Id", txtId.Text);
+    cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
+    cmd.Parameters.AddWithValue("@Endereco", txtEndereco.Text);
+    cmd.Parameters.AddWithValue("@Cep", mskCep.Text);
+    cmd.Parameters.AddWithValue("@Bairro", txtBairro.Text);
+    cmd.Parameters.AddWithValue("@Cidade", txtCidade.Text);
+    cmd.Parameters.AddWithValue("@Uf", txtUf.Text);
+    cmd.Parameters.AddWithValue("@Telefone", mskTelefone.Text);
+    cmd.CommandType = CommandType.Text;
+    con.Open();
+    try
+    {
+       int i = cmd.ExecuteNonQuery();
+       if (i > 0)
+        MessageBox.Show("Registro atualizado com sucesso!");
+    }
+     catch (Exception ex)
+    {
+        MessageBox.Show("Erro: " + ex.ToString());
+     }
+     finally
+     {
+        con.Close();
+     }
+   }
