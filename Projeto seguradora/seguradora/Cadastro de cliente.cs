@@ -19,22 +19,18 @@ namespace seguradora
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnsalvar_Click(object sender, EventArgs e)
         {
          
-            string sql = "INSERT INTO cliente (nome, data_nasc, telefone, endereco)  VALUES ( @nome,@data_nasc,@endereco,@telefone)"; 
+            string sql = "INSERT INTO cliente (nome_cli, data_nasc, telefone_cli, endereco_cli, cpf)  VALUES ( @nome,@data_nasc,@endereco,@telefone,@cpf)"; 
             SqlConnection conn = Conexao.obterConexao();
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.Add(new SqlParameter("@nome", txt_nomeCliente.Text));
             cmd.Parameters.Add(new SqlParameter("@data_nasc", txt_nascCliente.Text));
             cmd.Parameters.Add(new SqlParameter("@endereco", txt_enderecoCliente.Text));
             cmd.Parameters.Add(new SqlParameter("@telefone", txt_telefoneCliente.Text));
-            cmd.CommandType = CommandType.Text;
+			cmd.Parameters.Add(new SqlParameter("@cpf", txtcpf.Text));
+			cmd.CommandType = CommandType.Text;
             Conexao.obterConexao();
             try
             {
@@ -56,6 +52,15 @@ namespace seguradora
         {
             this.Close();
         }
-    }
+
+		private void btn_Limpar_Click(object sender, EventArgs e)
+		{
+			txt_nomeCliente.Clear();
+			txtcpf.Clear();
+			txt_nascCliente.Clear();
+			txt_enderecoCliente.Clear();
+			txt_telefoneCliente.Clear();
+		}
+	}
     
 }

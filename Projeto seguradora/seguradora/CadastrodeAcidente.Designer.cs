@@ -286,6 +286,7 @@
             this.txtchassi.Size = new System.Drawing.Size(145, 21);
             this.txtchassi.TabIndex = 100;
             this.txtchassi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtchassi_MouseClick);
+           
             // 
             // label5
             // 

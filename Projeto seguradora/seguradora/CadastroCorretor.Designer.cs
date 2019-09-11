@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtcodempresa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtregistro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnsair = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
+            this.lblempresa = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -118,14 +118,6 @@
             this.label4.TabIndex = 99;
             this.label4.Text = "CÓDIGO EMPRESA";
             // 
-            // txtcodempresa
-            // 
-            this.txtcodempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodempresa.Location = new System.Drawing.Point(575, 23);
-            this.txtcodempresa.Name = "txtcodempresa";
-            this.txtcodempresa.Size = new System.Drawing.Size(51, 21);
-            this.txtcodempresa.TabIndex = 98;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -165,6 +157,7 @@
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(136, 21);
             this.txtsenha.TabIndex = 102;
+            this.txtsenha.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -178,6 +171,7 @@
             this.button1.TabIndex = 106;
             this.button1.Text = "CANCELAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnsair
             // 
@@ -196,7 +190,6 @@
             // btnsalvar
             // 
             this.btnsalvar.BackColor = System.Drawing.Color.Gray;
-            this.btnsalvar.Enabled = false;
             this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsalvar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.ForeColor = System.Drawing.SystemColors.Info;
@@ -208,6 +201,15 @@
             this.btnsalvar.UseVisualStyleBackColor = false;
             this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
+            // lblempresa
+            // 
+            this.lblempresa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblempresa.Location = new System.Drawing.Point(575, 22);
+            this.lblempresa.Name = "lblempresa";
+            this.lblempresa.Size = new System.Drawing.Size(26, 26);
+            this.lblempresa.TabIndex = 107;
+            this.lblempresa.Text = "1";
+            // 
             // CadastroCorretor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +217,7 @@
             this.BackgroundImage = global::seguradora.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(648, 266);
+            this.Controls.Add(this.lblempresa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnsalvar);
@@ -223,14 +226,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtregistro);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtcodempresa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txttelefone);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtendereco);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcorretor);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -251,7 +253,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txttelefone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtcodempresa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtregistro;
         private System.Windows.Forms.Label label6;
@@ -259,5 +260,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btnsalvar;
+        private System.Windows.Forms.TextBox lblempresa;
     }
 }

@@ -73,6 +73,12 @@
     <Compile Include="Cadastro de cliente.Designer.cs">
       <DependentUpon>Cadastro de cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroApolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroApolice.Designer.cs">
+      <DependentUpon>CadastroApolice.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="Consulta Acidente.Designer.cs">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaApolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaApolice.Designer.cs">
+      <DependentUpon>ConsultaApolice.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     <Compile Include="ConsultaCorretor.Designer.cs">
       <DependentUpon>ConsultaCorretor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaRapida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRapida.Designer.cs">
+      <DependentUpon>ConsultaRapida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +145,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lembrete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lembrete.Designer.cs">
+      <DependentUpon>lembrete.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,6 +165,9 @@
     <EmbeddedResource Include="Cadastro de cliente.resx">
       <DependentUpon>Cadastro de cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroApolice.resx">
+      <DependentUpon>CadastroApolice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroCarro.resx">
       <DependentUpon>CadastroCarro.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +180,9 @@
     <EmbeddedResource Include="Consulta Acidente.resx">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaApolice.resx">
+      <DependentUpon>ConsultaApolice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCarro.resx">
       <DependentUpon>ConsultaCarro.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,11 +192,17 @@
     <EmbeddedResource Include="ConsultaCorretor.resx">
       <DependentUpon>ConsultaCorretor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRapida.resx">
+      <DependentUpon>ConsultaRapida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empresa.resx">
       <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lembrete.resx">
+      <DependentUpon>lembrete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

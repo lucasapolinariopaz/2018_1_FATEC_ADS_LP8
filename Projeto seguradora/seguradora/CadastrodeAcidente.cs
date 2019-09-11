@@ -41,20 +41,35 @@ namespace seguradora
 
             Conexao.obterConexao();
             DbDataReader dr = comm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                
-                txtmarca.Text = dr["marca"].ToString();
+                if (dr.Read())
+                {
+
+                 txtmarca.Text = dr["marca"].ToString();
                 txtmodelo.Text = dr["modelo"].ToString();
                 txtfabricao.Text = dr["ano_fabricao"].ToString();
                 txtanom.Text = dr["ano_modelo"].ToString();
                 txtplaca.Text = dr["placa"].ToString();
                 txtcor.Text = dr["cor"].ToString();
                 txtchassi.Text = dr["chassi"].ToString();
-                 fk_acicarro =int.Parse(dr["cod_car"].ToString());
+                fk_acicarro =int.Parse(dr["cod_car"].ToString());
                 
             }
-            Conexao.fecharConexao();
+                else
+                {
+                    MessageBox.Show("Nenhum registro encontrado com a placa informada!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                Conexao.fecharConexao();
+            }
         }
         private void btnsalvar_Click(object sender, EventArgs e)
         {
@@ -89,5 +104,7 @@ namespace seguradora
         {
             btnsalvar.Enabled = true;
         }
+
+        
     }
 }

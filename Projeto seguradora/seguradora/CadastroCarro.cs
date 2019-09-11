@@ -14,8 +14,6 @@ namespace seguradora
 {
 	public partial class CadastroCarro : Form
 	{
-		int fk_carro_cliente;
-
 		public CadastroCarro()
 		{
 			InitializeComponent();
@@ -29,23 +27,24 @@ namespace seguradora
 		private void btn_consultaCliente_Click(object sender, EventArgs e)
 		{
 			//SqlConnection conn = new SqlConnection(strconn);
+			String sql = "SELECT * FROM cliente WHERE cpf = @cpf";
 			SqlConnection conn = Conexao.obterConexao();
-			SqlCommand comm = new SqlCommand("SELECT * FROM cliente WHERE nome = '" +
-				txt_nomeCliente.Text + "';", conn);
-			comm.CommandType = CommandType.Text;
-			comm.Parameters.Add(new SqlParameter("@data_nasc", "data_nasc"));
-			comm.Parameters.Add(new SqlParameter("@telefone", "telefone"));
-			comm.Parameters.Add(new SqlParameter("@endereco", "endereco"));
-			comm.Parameters.Add(new SqlParameter("@cod_cli", "cod_cli"));
+			SqlCommand cmd = new SqlCommand(sql, conn);
+			
+			cmd.Parameters.Add(new SqlParameter("@cpf", txt_consultarCliente.Text));
 
+			cmd.CommandType = CommandType.Text;
 			Conexao.obterConexao();
-			DbDataReader dr = comm.ExecuteReader();
+			DbDataReader dr = cmd.ExecuteReader();
+
 			while (dr.Read())
 			{
+				txt_nomeCliente.Text = dr["nome_cli"].ToString();
+				txt_cpfCliente.Text = dr["cpf"].ToString();
 				txt_nascCliente.Text = dr["data_nasc"].ToString();
-				txt_telefoneCliente.Text = dr["telefone"].ToString();
-				txt_enderecoCliente.Text = dr["endereco"].ToString();
-				fk_carro_cliente = int.Parse(dr["cod_cli"].ToString());
+				txt_telefoneCliente.Text = dr["telefone_cli"].ToString();
+				txt_enderecoCliente.Text = dr["endereco_cli"].ToString();
+				txt_codCliente.Text = dr["cod_cli"].ToString();
 			}
 
 			conn.Close();
@@ -61,6 +60,9 @@ namespace seguradora
 
 		private void btn_Limpar_Click(object sender, EventArgs e)
 		{
+			txt_nomeCliente.Text = "";
+			txt_codCliente.Text = "";
+			txt_cpfCliente.Text = "";
 			txt_nascCliente.Text = "";
 			txt_telefoneCliente.Text = "";
 			txt_enderecoCliente.Text = "";
@@ -75,18 +77,25 @@ namespace seguradora
 
 		private void btn_Salvar_Click(object sender, EventArgs e)
 		{
-			string sql = "INSERT INTO carro (chassi, modelo, marca, cor, ano_fabricao," +
-				" ano_modelo, placa, cod_cli)" + " VALUES ('" +
-				txt_chassiCarro.Text + "', '" + txt_modeloCarro.Text + "', '" +
-				txt_marcaCarro.Text + "', '" + txt_corCarro + "', " +
-				int.Parse(txt_anoFabCarro.Text) + ", " + int.Parse(txt_anoModCarro.Text) +
-				", '" + txt_placaCarro.Text + "', " + fk_carro_cliente + ")";
+			string sql = "INSERT INTO carro (chassi, modelo, marca, cor, ano_fabricao, ano_modelo, placa, cod_cli) " +
+				"VALUES (@chassi, @modelo, @marca, @cor, @ano_fabricao, @ano_modelo, @placa, @cod_cli)";
 
 			// SqlConnection con = new SqlConnection(strconn);
 			SqlConnection conn = Conexao.obterConexao();
 			SqlCommand cmd = new SqlCommand(sql, conn);
+
+			cmd.Parameters.Add(new SqlParameter("@chassi", txt_chassiCarro.Text));
+			cmd.Parameters.Add(new SqlParameter("@modelo", txt_modeloCarro.Text));
+			cmd.Parameters.Add(new SqlParameter("@marca", txt_marcaCarro.Text));
+			cmd.Parameters.Add(new SqlParameter("@cor", txt_corCarro.Text));
+			cmd.Parameters.Add(new SqlParameter("@ano_fabricao", int.Parse(txt_anoFabCarro.Text)));
+			cmd.Parameters.Add(new SqlParameter("@ano_modelo", int.Parse(txt_anoModCarro.Text)));
+			cmd.Parameters.Add(new SqlParameter("@placa", txt_placaCarro.Text));
+			cmd.Parameters.Add(new SqlParameter("@cod_cli", int.Parse(txt_codCliente.Text)));
+
 			cmd.CommandType = CommandType.Text;
 			Conexao.obterConexao();
+
 			try
 			{
 				int i = cmd.ExecuteNonQuery();
@@ -102,7 +111,5 @@ namespace seguradora
 				Conexao.fecharConexao();
 			}
 		}
-
-       
-    }
+	}
 }

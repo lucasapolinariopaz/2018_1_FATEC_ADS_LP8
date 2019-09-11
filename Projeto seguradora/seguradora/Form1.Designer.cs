@@ -46,6 +46,7 @@
             this.vEÍCULOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cADASTRARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONSULTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONSULTARAPIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cADASTROToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONSULTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,7 +91,8 @@
             this.txtkey.PasswordChar = 'x';
             this.txtkey.Size = new System.Drawing.Size(234, 26);
             this.txtkey.TabIndex = 9;
-            this.txtkey.Text = "123";
+            this.txtkey.Text = "1234";
+            this.txtkey.UseSystemPasswordChar = true;
             // 
             // button4
             // 
@@ -104,6 +106,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Clique aqui";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -211,20 +214,23 @@
             // cADASTROToolStripMenuItem1
             // 
             this.cADASTROToolStripMenuItem1.Name = "cADASTROToolStripMenuItem1";
-            this.cADASTROToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cADASTROToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cADASTROToolStripMenuItem1.Text = "CADASTRO";
+            this.cADASTROToolStripMenuItem1.Click += new System.EventHandler(this.cADASTROToolStripMenuItem1_Click);
             // 
             // cONSULTAToolStripMenuItem1
             // 
             this.cONSULTAToolStripMenuItem1.Name = "cONSULTAToolStripMenuItem1";
-            this.cONSULTAToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTAToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem1.Text = "CONSULTAR";
+            this.cONSULTAToolStripMenuItem1.Click += new System.EventHandler(this.cONSULTAToolStripMenuItem1_Click);
             // 
             // vEÍCULOSToolStripMenuItem
             // 
             this.vEÍCULOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cADASTRARToolStripMenuItem,
-            this.cONSULTASToolStripMenuItem});
+            this.cONSULTASToolStripMenuItem,
+            this.cONSULTARAPIDAToolStripMenuItem});
             this.vEÍCULOSToolStripMenuItem.Enabled = false;
             this.vEÍCULOSToolStripMenuItem.Name = "vEÍCULOSToolStripMenuItem";
             this.vEÍCULOSToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
@@ -233,16 +239,23 @@
             // cADASTRARToolStripMenuItem
             // 
             this.cADASTRARToolStripMenuItem.Name = "cADASTRARToolStripMenuItem";
-            this.cADASTRARToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cADASTRARToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cADASTRARToolStripMenuItem.Text = "CADASTRAR";
             this.cADASTRARToolStripMenuItem.Click += new System.EventHandler(this.cADASTRARToolStripMenuItem_Click);
             // 
             // cONSULTASToolStripMenuItem
             // 
             this.cONSULTASToolStripMenuItem.Name = "cONSULTASToolStripMenuItem";
-            this.cONSULTASToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTASToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cONSULTASToolStripMenuItem.Text = "CONSULTAR";
             this.cONSULTASToolStripMenuItem.Click += new System.EventHandler(this.cONSULTASToolStripMenuItem_Click);
+            // 
+            // cONSULTARAPIDAToolStripMenuItem
+            // 
+            this.cONSULTARAPIDAToolStripMenuItem.Name = "cONSULTARAPIDAToolStripMenuItem";
+            this.cONSULTARAPIDAToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.cONSULTARAPIDAToolStripMenuItem.Text = "CONSULTA RAPIDA";
+            this.cONSULTARAPIDAToolStripMenuItem.Click += new System.EventHandler(this.cONSULTARAPIDAToolStripMenuItem_Click_1);
             // 
             // cLIENTESToolStripMenuItem
             // 
@@ -257,15 +270,16 @@
             // cADASTROToolStripMenuItem
             // 
             this.cADASTROToolStripMenuItem.Name = "cADASTROToolStripMenuItem";
-            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cADASTROToolStripMenuItem.Text = "CADASTRO";
             this.cADASTROToolStripMenuItem.Click += new System.EventHandler(this.cADASTROToolStripMenuItem_Click);
             // 
             // cONSULTAToolStripMenuItem
             // 
             this.cONSULTAToolStripMenuItem.Name = "cONSULTAToolStripMenuItem";
-            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem.Text = "CONSULTAR";
+            this.cONSULTAToolStripMenuItem.Click += new System.EventHandler(this.cONSULTAToolStripMenuItem_Click);
             // 
             // ACIDENTESToolStripMenuItem
             // 
@@ -280,14 +294,14 @@
             // consiaciToolStripMenuItem
             // 
             this.consiaciToolStripMenuItem.Name = "consiaciToolStripMenuItem";
-            this.consiaciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consiaciToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.consiaciToolStripMenuItem.Text = "CONSULTAR";
             this.consiaciToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // cadaciToolStripMenuItem1
             // 
             this.cadaciToolStripMenuItem1.Name = "cadaciToolStripMenuItem1";
-            this.cadaciToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cadaciToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cadaciToolStripMenuItem1.Text = "CADASTRAR";
             this.cadaciToolStripMenuItem1.Click += new System.EventHandler(this.cADASTRARToolStripMenuItem1_Click);
             // 
@@ -392,6 +406,7 @@
         private System.Windows.Forms.ToolStripMenuItem cONSULTACORRETORToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sOBREToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONSULTARAPIDAToolStripMenuItem;
     }
 }
 
