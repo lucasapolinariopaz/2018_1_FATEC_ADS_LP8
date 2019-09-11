@@ -74,8 +74,8 @@ namespace seguradora
 
 		private void btn_Alterar_Click(object sender, EventArgs e)
 		{
-			string sql = "UPDATE cliente SET nome = @nome, cpf = @cpf, data_nasc = @data_nasc, telefone = @telefone, " +
-				"endereco = @endereco WHERE cod_cli = @cod_cli";
+			string sql = "UPDATE cliente SET nome_cli = @nome, cpf = @cpf, data_nasc = @data_nasc, telefone_cli = @telefone, " +
+                "endereco_cli = @endereco WHERE cod_cli = @cod_cli";
 			SqlConnection conn = Conexao.obterConexao();
 			SqlCommand cmd = new SqlCommand(sql, conn);
 

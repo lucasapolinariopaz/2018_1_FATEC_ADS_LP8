@@ -210,11 +210,11 @@ namespace seguradora
 					txt_CarroChassis.Text = dr["chassi"].ToString();
 					txt_CarroPlaca.Text = dr["placa"].ToString();
 					txt_ClienteCod.Text = dr["cod_cli"].ToString();
-					txt_ClienteNome.Text = dr["nome"].ToString();
+					txt_ClienteNome.Text = dr["nome_cli"].ToString();
 					txt_ClienteCpf.Text = dr["cpf"].ToString();
 					txt_ClienteDataNasc.Text = dr["data_nasc"].ToString();
-					txt_ClienteEndereco.Text = dr["endereco"].ToString();
-					txt_ClienteTelefone.Text = dr["telefone"].ToString();
+					txt_ClienteEndereco.Text = dr["endereco_cli"].ToString();
+					txt_ClienteTelefone.Text = dr["telefone_cli"].ToString();
 				}
 				else
 				{

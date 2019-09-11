@@ -157,6 +157,18 @@ namespace seguradora
             ConsultaCliente novo = new ConsultaCliente();
             novo.Show();
         }
+
+        private void cONSULTAToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaApolice novo = new ConsultaApolice();
+            novo.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            lembrete novo = new lembrete();
+            novo.Show();
+        }
     }
     }
   

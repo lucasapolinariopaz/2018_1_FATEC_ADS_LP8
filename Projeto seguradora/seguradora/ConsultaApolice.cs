@@ -90,11 +90,11 @@ namespace seguradora
 					txt_CarroPlaca.Text = dr["placa"].ToString();
 
 					txt_ClienteCod.Text = dr["cod_cli"].ToString();
-					txt_ClienteNome.Text = dr[10].ToString();
+					txt_ClienteNome.Text = dr["nome_cli"].ToString();
 					txt_ClienteCpf.Text = dr["cpf"].ToString();
 					txt_ClienteDataNasc.Text = dr["data_nasc"].ToString();
-					txt_ClienteEndereco.Text = dr[13].ToString();
-					txt_ClienteTelefone.Text = dr[12].ToString();
+					txt_ClienteEndereco.Text = dr["endereco_cli"].ToString();
+					txt_ClienteTelefone.Text = dr["telefone_cli"].ToString();
 
 					txt_ApoliceCod.Text = dr["cod_apolice"].ToString();
 					txt_ApoliceValor.Text = dr["valor"].ToString();
@@ -103,11 +103,11 @@ namespace seguradora
 					txt_ApoliceData.Text = dr["data"].ToString();
 
 					txt_CorretorCod.Text = dr["cod_corretor"].ToString();
-					txt_CorretorNome.Text = dr[24].ToString();
+					txt_CorretorNome.Text = dr["nome"].ToString();
 					txt_EmpresaCod.Text = dr["cod_empresa"].ToString();
 					txt_CorretorRegistro.Text = dr["regi_corretor"].ToString();
-					txt_CorretorEndereco.Text = dr[25].ToString();
-					txt_CorretorTelefone.Text = dr[26].ToString();
+					txt_CorretorEndereco.Text = dr["endereco"].ToString();
+					txt_CorretorTelefone.Text = dr["telefone"].ToString();
 				}
 				else
 				{

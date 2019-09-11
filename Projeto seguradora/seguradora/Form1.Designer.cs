@@ -91,7 +91,7 @@
             this.txtkey.PasswordChar = 'x';
             this.txtkey.Size = new System.Drawing.Size(234, 26);
             this.txtkey.TabIndex = 9;
-            this.txtkey.Text = "123";
+            this.txtkey.Text = "1234";
             this.txtkey.UseSystemPasswordChar = true;
             // 
             // button4
@@ -106,6 +106,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Clique aqui";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -222,6 +223,7 @@
             this.cONSULTAToolStripMenuItem1.Name = "cONSULTAToolStripMenuItem1";
             this.cONSULTAToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem1.Text = "CONSULTAR";
+            this.cONSULTAToolStripMenuItem1.Click += new System.EventHandler(this.cONSULTAToolStripMenuItem1_Click);
             // 
             // vEÍCULOSToolStripMenuItem
             // 
@@ -268,14 +270,14 @@
             // cADASTROToolStripMenuItem
             // 
             this.cADASTROToolStripMenuItem.Name = "cADASTROToolStripMenuItem";
-            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cADASTROToolStripMenuItem.Text = "CADASTRO";
             this.cADASTROToolStripMenuItem.Click += new System.EventHandler(this.cADASTROToolStripMenuItem_Click);
             // 
             // cONSULTAToolStripMenuItem
             // 
             this.cONSULTAToolStripMenuItem.Name = "cONSULTAToolStripMenuItem";
-            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem.Text = "CONSULTAR";
             this.cONSULTAToolStripMenuItem.Click += new System.EventHandler(this.cONSULTAToolStripMenuItem_Click);
             // 

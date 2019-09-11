@@ -22,7 +22,7 @@ namespace seguradora
         private void btnsalvar_Click(object sender, EventArgs e)
         {
          
-            string sql = "INSERT INTO cliente (nome, data_nasc, telefone, endereco, cpf)  VALUES ( @nome,@data_nasc,@endereco,@telefone,@cpf)"; 
+            string sql = "INSERT INTO cliente (nome_cli, data_nasc, telefone_cli, endereco_cli, cpf)  VALUES ( @nome,@data_nasc,@endereco,@telefone,@cpf)"; 
             SqlConnection conn = Conexao.obterConexao();
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.Add(new SqlParameter("@nome", txt_nomeCliente.Text));
