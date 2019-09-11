@@ -42,7 +42,7 @@ namespace seguradora
 
 		private void btn_consultaPlaca_Click(object sender, EventArgs e)
 		{
-			String sql = "SELECT cli.nome_cli, cli.cpf, cli.data_nasc, " +
+			String sql = "SELECT cli.nome_cli, cli.CPF, cli.data_nasc, " +
                 "cli.telefone_cli, cli.endereco_cli, car.marca, car.modelo, car.ano_fabricao, " +
 				"car.ano_modelo, car.placa, car.cor, car.chassi, car.cod_car FROM " +
 				"cliente cli INNER JOIN carro car ON cli.cod_cli = car.cod_cli WHERE " +
@@ -61,7 +61,7 @@ namespace seguradora
                 if (dr.Read())
                 {
                     txt_nomeCliente.Text = dr["nome_cli"].ToString();
-					txt_cpfCliente.Text = dr["cpf"].ToString();
+					txt_cpfCliente.Text = dr["CPF"].ToString();
                     txt_nascCliente.Text = dr["data_nasc"].ToString();
                     txt_telefoneCliente.Text = dr["telefone_cli"].ToString();
                     txt_enderecoCliente.Text = dr["endereco_cli"].ToString();

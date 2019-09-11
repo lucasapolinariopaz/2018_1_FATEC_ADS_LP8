@@ -12,7 +12,7 @@ namespace seguradora
     class Conexao
     {
 
-        private static string connString = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\cesar\\Desktop\\seguradora v1.08\\seguradora\\seguradora.mdf;Integrated Security=True;User Instance=True";
+        private static string connString = "Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\cesar\\Desktop\\seguradora v1.11\\seguradora\\seguradora.mdf;Integrated Security=True;User Instance=True";
 
         // representa a conexão com o banco
         private static SqlConnection conn = null;

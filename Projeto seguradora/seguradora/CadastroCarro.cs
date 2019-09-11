@@ -31,7 +31,7 @@ namespace seguradora
 			SqlConnection conn = Conexao.obterConexao();
 			SqlCommand cmd = new SqlCommand(sql, conn);
 			
-			cmd.Parameters.Add(new SqlParameter("@cpf", txt_consultarCliente));
+			cmd.Parameters.Add(new SqlParameter("@cpf", txt_consultarCliente.Text));
 
 			cmd.CommandType = CommandType.Text;
 			Conexao.obterConexao();
@@ -39,11 +39,11 @@ namespace seguradora
 
 			while (dr.Read())
 			{
-				txt_nomeCliente.Text = dr["nome"].ToString();
+				txt_nomeCliente.Text = dr["nome_cli"].ToString();
 				txt_cpfCliente.Text = dr["cpf"].ToString();
 				txt_nascCliente.Text = dr["data_nasc"].ToString();
-				txt_telefoneCliente.Text = dr["telefone"].ToString();
-				txt_enderecoCliente.Text = dr["endereco"].ToString();
+				txt_telefoneCliente.Text = dr["telefone_cli"].ToString();
+				txt_enderecoCliente.Text = dr["endereco_cli"].ToString();
 				txt_codCliente.Text = dr["cod_cli"].ToString();
 			}
 

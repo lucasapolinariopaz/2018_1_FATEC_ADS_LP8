@@ -51,11 +51,11 @@ namespace seguradora
 				if (dr.Read())
 				{
 					txt_codCliente.Text = dr["cod_cli"].ToString();
-					txt_nomeCliente.Text = dr["nome"].ToString();
+					txt_nomeCliente.Text = dr["nome_cli"].ToString();
 					txt_Cpf.Text = dr["cpf"].ToString();
 					txt_nascCliente.Text = dr["data_nasc"].ToString();
-					txt_enderecoCliente.Text = dr["endereco"].ToString();
-					txt_telefoneCliente.Text = dr["telefone"].ToString();
+					txt_enderecoCliente.Text = dr["endereco_cli"].ToString();
+					txt_telefoneCliente.Text = dr["telefone_cli"].ToString();
 				}
 				else
 				{
