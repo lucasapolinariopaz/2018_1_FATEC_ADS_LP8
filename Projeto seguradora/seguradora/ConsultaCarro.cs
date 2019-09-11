@@ -19,7 +19,7 @@ namespace seguradora
 			InitializeComponent();
 		}
 
-		public void LimparTodosCampos()
+		public void limparTodosCampos()
 		{
 			txt_nomeCliente.Clear();
 			txt_nascCliente.Clear();
@@ -91,7 +91,7 @@ namespace seguradora
 
 		private void btn_Limpar_Click(object sender, EventArgs e)
 		{
-			LimparTodosCampos();
+			limparTodosCampos();
 		}
 
 		private void btn_Alterar_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace seguradora
 				Conexao.fecharConexao();
 			}
 
-			LimparTodosCampos();
+			limparTodosCampos();
 		}
 	}
 }

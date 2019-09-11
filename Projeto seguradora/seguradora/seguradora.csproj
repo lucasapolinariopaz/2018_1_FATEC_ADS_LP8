@@ -104,6 +104,12 @@
     <Compile Include="Consulta Acidente.Designer.cs">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaApolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaApolice.Designer.cs">
+      <DependentUpon>ConsultaApolice.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta Acidente.resx">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaApolice.resx">
+      <DependentUpon>ConsultaApolice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCarro.resx">
       <DependentUpon>ConsultaCarro.cs</DependentUpon>
