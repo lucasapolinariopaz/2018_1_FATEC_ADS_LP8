@@ -144,6 +144,19 @@ namespace seguradora
             ConsultaRapida novo = new ConsultaRapida();
             novo.Show();
         }
+
+        private void cADASTROToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadastroApolice novo = new CadastroApolice();
+            novo.Show();
+
+        }
+
+        private void cONSULTAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCliente novo = new ConsultaCliente();
+            novo.Show();
+        }
     }
     }
   
