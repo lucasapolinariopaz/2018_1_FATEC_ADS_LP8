@@ -32,8 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnsair = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtsenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtregistro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,6 +72,7 @@
             this.btnsair.TabIndex = 120;
             this.btnsair.Text = "SAIR";
             this.btnsair.UseVisualStyleBackColor = false;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
             // btnsalvar
             // 
@@ -88,26 +87,6 @@
             this.btnsalvar.TabIndex = 119;
             this.btnsalvar.Text = "SALVAR";
             this.btnsalvar.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(434, 177);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 15);
-            this.label6.TabIndex = 118;
-            this.label6.Text = "SENHA";
-            // 
-            // txtsenha
-            // 
-            this.txtsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsenha.Location = new System.Drawing.Point(498, 171);
-            this.txtsenha.Name = "txtsenha";
-            this.txtsenha.Size = new System.Drawing.Size(136, 21);
-            this.txtsenha.TabIndex = 117;
             // 
             // label5
             // 
@@ -232,7 +211,6 @@
             // btnconsultar
             // 
             this.btnconsultar.BackColor = System.Drawing.Color.Gray;
-            this.btnconsultar.Enabled = false;
             this.btnconsultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnconsultar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsultar.ForeColor = System.Drawing.SystemColors.Info;
@@ -242,6 +220,7 @@
             this.btnconsultar.TabIndex = 124;
             this.btnconsultar.Text = "CONSULTAR";
             this.btnconsultar.UseVisualStyleBackColor = false;
+            this.btnconsultar.Click += new System.EventHandler(this.btnconsultar_Click);
             // 
             // ConsultaCorretor
             // 
@@ -256,8 +235,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnsalvar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtsenha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtregistro);
             this.Controls.Add(this.label4);
@@ -284,8 +261,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btnsalvar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtregistro;
         private System.Windows.Forms.Label label4;

@@ -165,6 +165,7 @@
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(136, 21);
             this.txtsenha.TabIndex = 102;
+            this.txtsenha.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -196,7 +197,6 @@
             // btnsalvar
             // 
             this.btnsalvar.BackColor = System.Drawing.Color.Gray;
-            this.btnsalvar.Enabled = false;
             this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsalvar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.ForeColor = System.Drawing.SystemColors.Info;

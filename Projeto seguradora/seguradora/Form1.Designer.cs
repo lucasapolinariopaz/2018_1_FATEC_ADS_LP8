@@ -91,6 +91,7 @@
             this.txtkey.Size = new System.Drawing.Size(234, 26);
             this.txtkey.TabIndex = 9;
             this.txtkey.Text = "123";
+            this.txtkey.UseSystemPasswordChar = true;
             // 
             // button4
             // 
@@ -211,13 +212,13 @@
             // cADASTROToolStripMenuItem1
             // 
             this.cADASTROToolStripMenuItem1.Name = "cADASTROToolStripMenuItem1";
-            this.cADASTROToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cADASTROToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cADASTROToolStripMenuItem1.Text = "CADASTRO";
             // 
             // cONSULTAToolStripMenuItem1
             // 
             this.cONSULTAToolStripMenuItem1.Name = "cONSULTAToolStripMenuItem1";
-            this.cONSULTAToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTAToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem1.Text = "CONSULTAR";
             // 
             // vEÍCULOSToolStripMenuItem
@@ -233,14 +234,14 @@
             // cADASTRARToolStripMenuItem
             // 
             this.cADASTRARToolStripMenuItem.Name = "cADASTRARToolStripMenuItem";
-            this.cADASTRARToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cADASTRARToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cADASTRARToolStripMenuItem.Text = "CADASTRAR";
             this.cADASTRARToolStripMenuItem.Click += new System.EventHandler(this.cADASTRARToolStripMenuItem_Click);
             // 
             // cONSULTASToolStripMenuItem
             // 
             this.cONSULTASToolStripMenuItem.Name = "cONSULTASToolStripMenuItem";
-            this.cONSULTASToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTASToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cONSULTASToolStripMenuItem.Text = "CONSULTAR";
             this.cONSULTASToolStripMenuItem.Click += new System.EventHandler(this.cONSULTASToolStripMenuItem_Click);
             // 
@@ -257,14 +258,14 @@
             // cADASTROToolStripMenuItem
             // 
             this.cADASTROToolStripMenuItem.Name = "cADASTROToolStripMenuItem";
-            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cADASTROToolStripMenuItem.Text = "CADASTRO";
             this.cADASTROToolStripMenuItem.Click += new System.EventHandler(this.cADASTROToolStripMenuItem_Click);
             // 
             // cONSULTAToolStripMenuItem
             // 
             this.cONSULTAToolStripMenuItem.Name = "cONSULTAToolStripMenuItem";
-            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cONSULTAToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cONSULTAToolStripMenuItem.Text = "CONSULTAR";
             // 
             // ACIDENTESToolStripMenuItem
@@ -280,14 +281,14 @@
             // consiaciToolStripMenuItem
             // 
             this.consiaciToolStripMenuItem.Name = "consiaciToolStripMenuItem";
-            this.consiaciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consiaciToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.consiaciToolStripMenuItem.Text = "CONSULTAR";
             this.consiaciToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // cadaciToolStripMenuItem1
             // 
             this.cadaciToolStripMenuItem1.Name = "cadaciToolStripMenuItem1";
-            this.cadaciToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cadaciToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cadaciToolStripMenuItem1.Text = "CADASTRAR";
             this.cadaciToolStripMenuItem1.Click += new System.EventHandler(this.cADASTRARToolStripMenuItem1_Click);
             // 
