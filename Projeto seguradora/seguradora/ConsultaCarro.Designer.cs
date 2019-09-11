@@ -58,7 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.txtcodcar = new System.Windows.Forms.TextBox();
+            this.txtcodca = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@
             this.btn_consultaPlaca.ForeColor = System.Drawing.SystemColors.Info;
             this.btn_consultaPlaca.Location = new System.Drawing.Point(198, 6);
             this.btn_consultaPlaca.Name = "btn_consultaPlaca";
-            this.btn_consultaPlaca.Size = new System.Drawing.Size(107, 23);
+            this.btn_consultaPlaca.Size = new System.Drawing.Size(117, 23);
             this.btn_consultaPlaca.TabIndex = 3;
             this.btn_consultaPlaca.Text = "CONSULTAR";
             this.btn_consultaPlaca.UseVisualStyleBackColor = false;
@@ -372,12 +372,12 @@
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // txtcodcar
+            // txtcodca
             // 
-            this.txtcodcar.Location = new System.Drawing.Point(560, 12);
-            this.txtcodcar.Name = "txtcodcar";
-            this.txtcodcar.Size = new System.Drawing.Size(37, 20);
-            this.txtcodcar.TabIndex = 28;
+            this.txtcodca.Location = new System.Drawing.Point(560, 12);
+            this.txtcodca.Name = "txtcodca";
+            this.txtcodca.Size = new System.Drawing.Size(37, 20);
+            this.txtcodca.TabIndex = 28;
             // 
             // label13
             // 
@@ -398,7 +398,7 @@
             this.BackgroundImage = global::seguradora.Properties.Resources._1;
             this.ClientSize = new System.Drawing.Size(609, 315);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtcodcar);
+            this.Controls.Add(this.txtcodca);
             this.Controls.Add(this.txt_placaCarro);
             this.Controls.Add(this.txt_anoModCarro);
             this.Controls.Add(this.txt_corCarro);
@@ -470,7 +470,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Button btn_Cancelar;
-        private System.Windows.Forms.TextBox txtcodcar;
+        private System.Windows.Forms.TextBox txtcodca;
         private System.Windows.Forms.Label label13;
     }
 }

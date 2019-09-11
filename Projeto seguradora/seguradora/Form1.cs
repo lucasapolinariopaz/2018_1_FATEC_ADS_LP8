@@ -136,6 +136,14 @@ namespace seguradora
             ConsultaCorretor novo = new ConsultaCorretor();
             novo.Show();
         }
+
+      
+
+        private void cONSULTARAPIDAToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ConsultaRapida novo = new ConsultaRapida();
+            novo.Show();
+        }
     }
     }
   

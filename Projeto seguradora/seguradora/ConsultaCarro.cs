@@ -50,23 +50,37 @@ namespace seguradora
 
 			Conexao.obterConexao();
 			DbDataReader dr = comm.ExecuteReader();
-			while (dr.Read())
-			{
-				txt_nomeCliente.Text = dr["nome"].ToString();
-				txt_nascCliente.Text = dr["data_nasc"].ToString();
-				txt_telefoneCliente.Text = dr["telefone"].ToString();
-				txt_enderecoCliente.Text = dr["endereco"].ToString();
-				txt_marcaCarro.Text = dr["marca"].ToString();
-				txt_modeloCarro.Text = dr["modelo"].ToString();
-				txt_anoFabCarro.Text = dr["ano_fabricao"].ToString();
-				txt_anoModCarro.Text = dr["ano_modelo"].ToString();
-				txt_placaCarro.Text = dr["placa"].ToString();
-				txt_corCarro.Text = dr["cor"].ToString();
-				txt_chassiCarro.Text = dr["chassi"].ToString();
-				pk_car = int.Parse(dr["cod_car"].ToString());
-			}
-			Conexao.fecharConexao();
-		}
+            try
+            {
+                if (dr.Read())
+                {
+                    txt_nomeCliente.Text = dr["nome"].ToString();
+                    txt_nascCliente.Text = dr["data_nasc"].ToString();
+                    txt_telefoneCliente.Text = dr["telefone"].ToString();
+                    txt_enderecoCliente.Text = dr["endereco"].ToString();
+                    txt_marcaCarro.Text = dr["marca"].ToString();
+                    txt_modeloCarro.Text = dr["modelo"].ToString();
+                    txt_anoFabCarro.Text = dr["ano_fabricao"].ToString();
+                    txt_anoModCarro.Text = dr["ano_modelo"].ToString();
+                    txt_placaCarro.Text = dr["placa"].ToString();
+                    txt_corCarro.Text = dr["cor"].ToString();
+                    txt_chassiCarro.Text = dr["chassi"].ToString();
+                    pk_car = int.Parse(dr["cod_car"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Nenhum registro encontrado com a placa informada!");
+                }
+                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                Conexao.fecharConexao();
+            }
+        }
 
 		private void btn_Alterar_Click(object sender, EventArgs e)
 		{
@@ -94,7 +108,7 @@ namespace seguradora
 			comm.Parameters.Add(new SqlParameter("@placa", txt_placaCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@cor", txt_corCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@chassi", txt_chassiCarro.Text));
-            comm.Parameters.Add(new SqlParameter("@cod_car", int.Parse(txtcodcar.Text)));  
+            comm.Parameters.Add(new SqlParameter("@cod_car", int.Parse(txtcodca.Text)));  
             comm.CommandType = CommandType.Text;
 			Conexao.obterConexao();
 			try

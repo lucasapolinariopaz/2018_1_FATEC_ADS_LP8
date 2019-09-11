@@ -116,6 +116,12 @@
     <Compile Include="ConsultaCorretor.Designer.cs">
       <DependentUpon>ConsultaCorretor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaRapida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRapida.Designer.cs">
+      <DependentUpon>ConsultaRapida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCorretor.resx">
       <DependentUpon>ConsultaCorretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRapida.resx">
+      <DependentUpon>ConsultaRapida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empresa.resx">
       <DependentUpon>Empresa.cs</DependentUpon>
