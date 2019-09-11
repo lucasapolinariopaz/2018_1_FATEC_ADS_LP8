@@ -41,33 +41,75 @@ namespace seguradora
 
             Conexao.obterConexao();
             DbDataReader dr = comm.ExecuteReader();
-			while (dr.Read())
+            try
             {
-                txtmodelo.Text = dr["modelo"].ToString();
-                txtmarca.Text = dr["marca"].ToString();
-                txtanomodelo.Text = dr["ano_modelo"].ToString();
-                txtfabricao.Text = dr["ano_fabricao"].ToString();
-                txtchassi.Text = dr["chassi"].ToString();
-                txtlocal.Text = dr["local"].ToString();
-                txtdata.Text = dr["data"].ToString();
-                txthora.Text = dr["hora"].ToString();
-                txtaci.Text = dr["cod_aci"].ToString();
-                txtdescricao.Text = dr["descricao"].ToString();
+                if (dr.Read())
+                {
 
+                    txtmodelo.Text = dr["modelo"].ToString();
+                    txtmarca.Text = dr["marca"].ToString();
+                    txtanomodelo.Text = dr["ano_modelo"].ToString();
+                    txtfabricao.Text = dr["ano_fabricao"].ToString();
+                    txtchassi.Text = dr["chassi"].ToString();
+                    txtlocal.Text = dr["local"].ToString();
+                    txtdata.Text = dr["data"].ToString();
+                    txthora.Text = dr["hora"].ToString();
+                    txtaci.Text = dr["cod_aci"].ToString();
+                    txtdescricao.Text = dr["descricao"].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Nenhum registro encontrado com a placa informada!");
+                }
             }
-            Conexao.fecharConexao();
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                Conexao.fecharConexao();
+            }
 
         }
 
         private void btnALTERAR_Click(object sender, EventArgs e)
         {
-            txtdata.Enabled = true;
-            txthora.Enabled = true;
-            txtlocal.Enabled = true;
-            txtdescricao.Enabled = true;
-            btnsalvar.Enabled = true;
+            string sql = "DELETE FROM acidente WHERE cod_aci=@Id";
+            SqlConnection con = Conexao.obterConexao();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@Id", txtaci.Text);
+            cmd.CommandType = CommandType.Text;
+            Conexao.obterConexao();
 
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                    MessageBox.Show("Registro excluído com sucesso!");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                Conexao.fecharConexao();
+            }
+            txtaci.Clear();
+            txtplaca.Clear();
+            txthora.Clear();
+            txtdata.Clear();
+            txtanomodelo.Clear();
+            txtlocal.Clear();
+            txtdescricao.Clear();
+            txtfabricao.Clear();
+            txtmodelo.Clear();
+            txtmarca.Clear();
+
+        }
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
@@ -103,5 +145,18 @@ namespace seguradora
             this.Close();
         }
 
-	}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtaci.Clear();
+            txtplaca.Clear();
+            txthora.Clear();
+            txtdata.Clear();
+            txtanomodelo.Clear();
+            txtlocal.Clear();
+            txtdescricao.Clear();
+            txtfabricao.Clear();
+            txtmodelo.Clear();
+            txtmarca.Clear();
+        }
+    }
     }

@@ -16,5 +16,10 @@ namespace seguradora
         {
             InitializeComponent();
         }
+
+        private void btnconsultar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

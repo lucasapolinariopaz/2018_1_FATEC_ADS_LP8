@@ -97,7 +97,7 @@
             this.txtfabricao.Location = new System.Drawing.Point(162, 99);
             this.txtfabricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtfabricao.Name = "txtfabricao";
-            this.txtfabricao.Size = new System.Drawing.Size(99, 20);
+            this.txtfabricao.Size = new System.Drawing.Size(109, 20);
             this.txtfabricao.TabIndex = 65;
             // 
             // btnbusca
@@ -137,14 +137,13 @@
             this.btnALTERAR.Name = "btnALTERAR";
             this.btnALTERAR.Size = new System.Drawing.Size(75, 23);
             this.btnALTERAR.TabIndex = 62;
-            this.btnALTERAR.Text = "ALTERAR";
+            this.btnALTERAR.Text = "EXCLUIR";
             this.btnALTERAR.UseVisualStyleBackColor = false;
             this.btnALTERAR.Click += new System.EventHandler(this.btnALTERAR_Click);
             // 
             // btnsalvar
             // 
             this.btnsalvar.BackColor = System.Drawing.Color.Gray;
-            this.btnsalvar.Enabled = false;
             this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsalvar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.ForeColor = System.Drawing.SystemColors.Info;
@@ -165,7 +164,6 @@
             // 
             // txtdescricao
             // 
-            this.txtdescricao.Enabled = false;
             this.txtdescricao.Location = new System.Drawing.Point(58, 181);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtdescricao.Multiline = true;
@@ -223,7 +221,6 @@
             // 
             // txtlocal
             // 
-            this.txtlocal.Enabled = false;
             this.txtlocal.Location = new System.Drawing.Point(73, 135);
             this.txtlocal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtlocal.Name = "txtlocal";
@@ -232,7 +229,6 @@
             // 
             // txtdata
             // 
-            this.txtdata.Enabled = false;
             this.txtdata.Location = new System.Drawing.Point(273, 137);
             this.txtdata.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtdata.Name = "txtdata";
@@ -241,11 +237,10 @@
             // 
             // txthora
             // 
-            this.txthora.Enabled = false;
             this.txthora.Location = new System.Drawing.Point(410, 136);
             this.txthora.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txthora.Name = "txthora";
-            this.txthora.Size = new System.Drawing.Size(69, 20);
+            this.txthora.Size = new System.Drawing.Size(57, 20);
             this.txthora.TabIndex = 52;
             // 
             // label1
@@ -302,7 +297,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label9.Location = new System.Drawing.Point(277, 107);
+            this.label9.Location = new System.Drawing.Point(277, 103);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 15);
             this.label9.TabIndex = 74;
@@ -351,6 +346,7 @@
             this.button1.TabIndex = 78;
             this.button1.Text = "CANCELAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Consulta_Acidente
             // 

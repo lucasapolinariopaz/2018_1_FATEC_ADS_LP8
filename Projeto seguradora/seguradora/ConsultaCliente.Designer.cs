@@ -226,6 +226,7 @@
             this.btnconsultar.TabIndex = 84;
             this.btnconsultar.Text = "CONSULTAR";
             this.btnconsultar.UseVisualStyleBackColor = false;
+            this.btnconsultar.Click += new System.EventHandler(this.btnconsultar_Click);
             // 
             // ConsultaCliente
             // 
