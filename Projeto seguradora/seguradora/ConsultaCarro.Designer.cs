@@ -60,6 +60,8 @@
 			this.btn_Excluir = new System.Windows.Forms.Button();
 			this.txt_CodCarro = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
+			this.txt_cpfCliente = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -97,30 +99,34 @@
 			// 
 			// txt_telefoneCliente
 			// 
-			this.txt_telefoneCliente.Location = new System.Drawing.Point(420, 82);
+			this.txt_telefoneCliente.Enabled = false;
+			this.txt_telefoneCliente.Location = new System.Drawing.Point(514, 82);
 			this.txt_telefoneCliente.Name = "txt_telefoneCliente";
-			this.txt_telefoneCliente.Size = new System.Drawing.Size(177, 20);
+			this.txt_telefoneCliente.Size = new System.Drawing.Size(103, 20);
 			this.txt_telefoneCliente.TabIndex = 9;
 			// 
 			// txt_enderecoCliente
 			// 
+			this.txt_enderecoCliente.Enabled = false;
 			this.txt_enderecoCliente.Location = new System.Drawing.Point(96, 112);
 			this.txt_enderecoCliente.Name = "txt_enderecoCliente";
-			this.txt_enderecoCliente.Size = new System.Drawing.Size(501, 20);
+			this.txt_enderecoCliente.Size = new System.Drawing.Size(521, 20);
 			this.txt_enderecoCliente.TabIndex = 10;
 			// 
 			// txt_nascCliente
 			// 
-			this.txt_nascCliente.Location = new System.Drawing.Point(170, 82);
+			this.txt_nascCliente.Enabled = false;
+			this.txt_nascCliente.Location = new System.Drawing.Point(330, 82);
 			this.txt_nascCliente.Name = "txt_nascCliente";
-			this.txt_nascCliente.Size = new System.Drawing.Size(135, 20);
+			this.txt_nascCliente.Size = new System.Drawing.Size(97, 20);
 			this.txt_nascCliente.TabIndex = 11;
 			// 
 			// txt_nomeCliente
 			// 
+			this.txt_nomeCliente.Enabled = false;
 			this.txt_nomeCliente.Location = new System.Drawing.Point(145, 52);
 			this.txt_nomeCliente.Name = "txt_nomeCliente";
-			this.txt_nomeCliente.Size = new System.Drawing.Size(452, 20);
+			this.txt_nomeCliente.Size = new System.Drawing.Size(472, 20);
 			this.txt_nomeCliente.TabIndex = 8;
 			// 
 			// label3
@@ -129,7 +135,7 @@
 			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label3.Location = new System.Drawing.Point(339, 83);
+			this.label3.Location = new System.Drawing.Point(433, 83);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(75, 16);
 			this.label3.TabIndex = 4;
@@ -153,7 +159,7 @@
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label2.Location = new System.Drawing.Point(12, 83);
+			this.label2.Location = new System.Drawing.Point(175, 83);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(152, 16);
 			this.label2.TabIndex = 6;
@@ -173,30 +179,30 @@
 			// 
 			// txt_placaCarro
 			// 
-			this.txt_placaCarro.Location = new System.Drawing.Point(482, 172);
+			this.txt_placaCarro.Location = new System.Drawing.Point(514, 172);
 			this.txt_placaCarro.Name = "txt_placaCarro";
-			this.txt_placaCarro.Size = new System.Drawing.Size(115, 20);
+			this.txt_placaCarro.Size = new System.Drawing.Size(103, 20);
 			this.txt_placaCarro.TabIndex = 21;
 			// 
 			// txt_anoModCarro
 			// 
-			this.txt_anoModCarro.Location = new System.Drawing.Point(343, 172);
+			this.txt_anoModCarro.Location = new System.Drawing.Point(357, 172);
 			this.txt_anoModCarro.Name = "txt_anoModCarro";
-			this.txt_anoModCarro.Size = new System.Drawing.Size(64, 20);
+			this.txt_anoModCarro.Size = new System.Drawing.Size(84, 20);
 			this.txt_anoModCarro.TabIndex = 22;
 			// 
 			// txt_corCarro
 			// 
 			this.txt_corCarro.Location = new System.Drawing.Point(54, 202);
 			this.txt_corCarro.Name = "txt_corCarro";
-			this.txt_corCarro.Size = new System.Drawing.Size(120, 20);
+			this.txt_corCarro.Size = new System.Drawing.Size(144, 20);
 			this.txt_corCarro.TabIndex = 23;
 			// 
 			// txt_anoFabCarro
 			// 
 			this.txt_anoFabCarro.Location = new System.Drawing.Point(163, 172);
 			this.txt_anoFabCarro.Name = "txt_anoFabCarro";
-			this.txt_anoFabCarro.Size = new System.Drawing.Size(64, 20);
+			this.txt_anoFabCarro.Size = new System.Drawing.Size(84, 20);
 			this.txt_anoFabCarro.TabIndex = 24;
 			// 
 			// txt_marcaCarro
@@ -208,16 +214,16 @@
 			// 
 			// txt_chassiCarro
 			// 
-			this.txt_chassiCarro.Location = new System.Drawing.Point(278, 202);
+			this.txt_chassiCarro.Location = new System.Drawing.Point(293, 202);
 			this.txt_chassiCarro.Name = "txt_chassiCarro";
-			this.txt_chassiCarro.Size = new System.Drawing.Size(319, 20);
+			this.txt_chassiCarro.Size = new System.Drawing.Size(324, 20);
 			this.txt_chassiCarro.TabIndex = 26;
 			// 
 			// txt_modeloCarro
 			// 
 			this.txt_modeloCarro.Location = new System.Drawing.Point(278, 142);
 			this.txt_modeloCarro.Name = "txt_modeloCarro";
-			this.txt_modeloCarro.Size = new System.Drawing.Size(319, 20);
+			this.txt_modeloCarro.Size = new System.Drawing.Size(339, 20);
 			this.txt_modeloCarro.TabIndex = 27;
 			// 
 			// btn_Sair
@@ -269,7 +275,7 @@
 			this.label10.BackColor = System.Drawing.Color.Transparent;
 			this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label10.Location = new System.Drawing.Point(424, 173);
+			this.label10.Location = new System.Drawing.Point(456, 173);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(52, 16);
 			this.label10.TabIndex = 12;
@@ -281,7 +287,7 @@
 			this.label9.BackColor = System.Drawing.Color.Transparent;
 			this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label9.Location = new System.Drawing.Point(241, 173);
+			this.label9.Location = new System.Drawing.Point(255, 173);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(96, 16);
 			this.label9.TabIndex = 13;
@@ -317,7 +323,7 @@
 			this.label12.BackColor = System.Drawing.Color.Transparent;
 			this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label12.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label12.Location = new System.Drawing.Point(208, 203);
+			this.label12.Location = new System.Drawing.Point(221, 203);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(66, 16);
 			this.label12.TabIndex = 16;
@@ -363,7 +369,8 @@
 			// 
 			// txt_CodCarro
 			// 
-			this.txt_CodCarro.Location = new System.Drawing.Point(560, 12);
+			this.txt_CodCarro.Enabled = false;
+			this.txt_CodCarro.Location = new System.Drawing.Point(580, 12);
 			this.txt_CodCarro.Name = "txt_CodCarro";
 			this.txt_CodCarro.Size = new System.Drawing.Size(37, 20);
 			this.txt_CodCarro.TabIndex = 28;
@@ -374,18 +381,40 @@
 			this.label13.BackColor = System.Drawing.Color.Transparent;
 			this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label13.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label13.Location = new System.Drawing.Point(476, 16);
+			this.label13.Location = new System.Drawing.Point(464, 13);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(60, 16);
+			this.label13.Size = new System.Drawing.Size(110, 16);
 			this.label13.TabIndex = 29;
-			this.label13.Text = "CÓDIGO";
+			this.label13.Text = "CÓDIGO CARRO";
+			// 
+			// txt_cpfCliente
+			// 
+			this.txt_cpfCliente.Enabled = false;
+			this.txt_cpfCliente.Location = new System.Drawing.Point(50, 82);
+			this.txt_cpfCliente.Name = "txt_cpfCliente";
+			this.txt_cpfCliente.Size = new System.Drawing.Size(110, 20);
+			this.txt_cpfCliente.TabIndex = 92;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.BackColor = System.Drawing.Color.Transparent;
+			this.label16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label16.Location = new System.Drawing.Point(14, 83);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(34, 16);
+			this.label16.TabIndex = 91;
+			this.label16.Text = "CPF";
 			// 
 			// ConsultaCarro
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::seguradora.Properties.Resources._1;
-			this.ClientSize = new System.Drawing.Size(609, 315);
+			this.ClientSize = new System.Drawing.Size(629, 315);
+			this.Controls.Add(this.txt_cpfCliente);
+			this.Controls.Add(this.label16);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.txt_CodCarro);
 			this.Controls.Add(this.txt_placaCarro);
@@ -461,5 +490,7 @@
 		private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.TextBox txt_CodCarro;
         private System.Windows.Forms.Label label13;
-    }
+		private System.Windows.Forms.TextBox txt_cpfCliente;
+		private System.Windows.Forms.Label label16;
+	}
 }

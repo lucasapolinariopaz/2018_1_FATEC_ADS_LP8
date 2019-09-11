@@ -73,6 +73,12 @@
     <Compile Include="Cadastro de cliente.Designer.cs">
       <DependentUpon>Cadastro de cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroApolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroApolice.Designer.cs">
+      <DependentUpon>CadastroApolice.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro de cliente.resx">
       <DependentUpon>Cadastro de cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroApolice.resx">
+      <DependentUpon>CadastroApolice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCarro.resx">
       <DependentUpon>CadastroCarro.cs</DependentUpon>

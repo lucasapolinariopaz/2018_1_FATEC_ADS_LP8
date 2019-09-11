@@ -39,10 +39,10 @@ namespace seguradora
 			String sql = "SELECT * FROM cliente WHERE cpf = @cpf";
 			SqlConnection conn = Conexao.obterConexao();
 			SqlCommand cmd = new SqlCommand(sql, conn);
-			cmd.CommandType = CommandType.Text;
-
+			
 			cmd.Parameters.Add(new SqlParameter("@cpf", txt_consultaCpf.Text));
 
+			cmd.CommandType = CommandType.Text;
 			Conexao.obterConexao();
 			DbDataReader dr = cmd.ExecuteReader();
 
