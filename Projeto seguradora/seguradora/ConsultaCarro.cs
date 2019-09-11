@@ -14,8 +14,6 @@ namespace seguradora
 {
 	public partial class ConsultaCarro : Form
 	{
-		int pk_car;
-
 		public ConsultaCarro()
 		{
 			InitializeComponent();
@@ -65,13 +63,13 @@ namespace seguradora
                     txt_placaCarro.Text = dr["placa"].ToString();
                     txt_corCarro.Text = dr["cor"].ToString();
                     txt_chassiCarro.Text = dr["chassi"].ToString();
-                    pk_car = int.Parse(dr["cod_car"].ToString());
+					txt_CodCarro.Text = dr["cod_car"].ToString();
                 }
                 else
                 {
                     MessageBox.Show("Nenhum registro encontrado com a placa informada!");
                 }
-                }
+            } 
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.ToString());
@@ -82,19 +80,23 @@ namespace seguradora
             }
         }
 
-		private void btn_Alterar_Click(object sender, EventArgs e)
+		private void btn_Limpar_Click(object sender, EventArgs e)
 		{
-			txt_marcaCarro.Enabled = true;
-			txt_modeloCarro.Enabled = true;
-			txt_anoFabCarro.Enabled = true;
-			txt_anoModCarro.Enabled = true;
-			txt_placaCarro.Enabled = true;
-			txt_corCarro.Enabled = true;
-			txt_chassiCarro.Enabled = true;
-			btn_Salvar.Enabled = true;
+			txt_nomeCliente.Clear();
+			txt_nascCliente.Clear();
+			txt_telefoneCliente.Clear();
+			txt_enderecoCliente.Clear();
+			txt_marcaCarro.Clear();
+			txt_modeloCarro.Clear();
+			txt_anoFabCarro.Clear();
+			txt_anoModCarro.Clear();
+			txt_placaCarro.Clear();
+			txt_corCarro.Clear();
+			txt_chassiCarro.Clear();
+			txt_CodCarro.Clear();
 		}
 
-		private void btn_Salvar_Click(object sender, EventArgs e)
+		private void btn_Alterar_Click(object sender, EventArgs e)
 		{
 			string sql = "UPDATE carro SET marca = @marca, modelo = @modelo, " +
 				"ano_fabricao = @ano_fabricao, ano_modelo = @ano_modelo, placa = @placa, " +
@@ -108,8 +110,8 @@ namespace seguradora
 			comm.Parameters.Add(new SqlParameter("@placa", txt_placaCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@cor", txt_corCarro.Text));
 			comm.Parameters.Add(new SqlParameter("@chassi", txt_chassiCarro.Text));
-            comm.Parameters.Add(new SqlParameter("@cod_car", int.Parse(txtcodca.Text)));  
-            comm.CommandType = CommandType.Text;
+			comm.Parameters.Add(new SqlParameter("@cod_car", int.Parse(txt_CodCarro.Text)));
+			comm.CommandType = CommandType.Text;
 			Conexao.obterConexao();
 			try
 			{
@@ -127,9 +129,42 @@ namespace seguradora
 			}
 		}
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
-        {
+		private void btn_Excluir_Click(object sender, EventArgs e)
+		{
+			string sql = "DELETE FROM carro WHERE cod_car = @cod_car";
+			SqlConnection conn = Conexao.obterConexao();
+			SqlCommand cmd = new SqlCommand(sql, conn);
+			cmd.Parameters.AddWithValue("@cod_car", txt_CodCarro.Text);
+			cmd.CommandType = CommandType.Text;
+			Conexao.obterConexao();
+			
+			try
+			{
+				int i = cmd.ExecuteNonQuery();
+				if (i > 0)
+					MessageBox.Show("Registro excluído com sucesso!");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro: " + ex.ToString());
+			}
+			finally
+			{
+				Conexao.fecharConexao();
+			}
 
-        }
-    }
+			txt_nomeCliente.Clear();
+			txt_nascCliente.Clear();
+			txt_telefoneCliente.Clear();
+			txt_enderecoCliente.Clear();
+			txt_marcaCarro.Clear();
+			txt_modeloCarro.Clear();
+			txt_anoFabCarro.Clear();
+			txt_anoModCarro.Clear();
+			txt_placaCarro.Clear();
+			txt_corCarro.Clear();
+			txt_chassiCarro.Clear();
+			txt_CodCarro.Clear();
+		}
+	}
 }
