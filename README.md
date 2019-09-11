@@ -5,8 +5,13 @@ Nesse projeto foi desenvolvido um sistema de controle de uma seguradora
 
 Ferramentas:
 
-IDE: Microsoft Visual Studio 2017
+IDE: Microsoft Visual Studio 2017 <br>
+Linguagem: C# <br>
+SGBD: SQL Server <br>
 
-Linguagem: C#
+Equipe do projeto:
 
-SGBD: SQL Server
+CARLOS MENDONÇA FALCÃO <br>
+CESAR ALEXANDRE N. DE GODOI <br>
+LUCAS APOLINÁRIO PAZ <br>
+MATHEUS FELIPE S. DE OLIVEIRA <br>
