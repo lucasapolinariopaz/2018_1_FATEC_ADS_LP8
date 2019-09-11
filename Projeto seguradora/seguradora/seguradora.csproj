@@ -67,11 +67,29 @@
     <Compile Include="Acidente.Designer.cs">
       <DependentUpon>Acidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro de cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro de cliente.Designer.cs">
+      <DependentUpon>Cadastro de cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastroCarro.Designer.cs">
       <DependentUpon>CadastroCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroCorretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCorretor.Designer.cs">
+      <DependentUpon>CadastroCorretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrodeAcidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrodeAcidente.Designer.cs">
+      <DependentUpon>CadastrodeAcidente.cs</DependentUpon>
     </Compile>
     <Compile Include="conexao.cs" />
     <Compile Include="Consulta Acidente.cs">
@@ -86,6 +104,24 @@
     <Compile Include="ConsultaCarro.Designer.cs">
       <DependentUpon>ConsultaCarro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCliente.Designer.cs">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCorretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCorretor.Designer.cs">
+      <DependentUpon>ConsultaCorretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa.Designer.cs">
+      <DependentUpon>Empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +130,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seguradoraDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>seguradoraDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Acidente.resx">
       <DependentUpon>Acidente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro de cliente.resx">
+      <DependentUpon>Cadastro de cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroCarro.resx">
       <DependentUpon>CadastroCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCorretor.resx">
+      <DependentUpon>CadastroCorretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrodeAcidente.resx">
+      <DependentUpon>CadastrodeAcidente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta Acidente.resx">
       <DependentUpon>Consulta Acidente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCarro.resx">
       <DependentUpon>ConsultaCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCliente.resx">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCorretor.resx">
+      <DependentUpon>ConsultaCorretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa.resx">
+      <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -128,6 +187,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="seguradoraDataSet.xsc">
+      <DependentUpon>seguradoraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="seguradoraDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>seguradoraDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="seguradoraDataSet.xss">
+      <DependentUpon>seguradoraDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -149,6 +219,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="seguradora.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seguradora_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>seguradora.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

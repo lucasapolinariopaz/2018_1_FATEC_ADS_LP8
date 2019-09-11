@@ -54,7 +54,11 @@ namespace seguradora
             {
 
                 MessageBox.Show("Seja bem vindo!");
-
+                eMPRESAToolStripMenuItem.Enabled = true;
+                ACIDENTESToolStripMenuItem.Enabled = true;
+                cLIENTESToolStripMenuItem.Enabled = true;
+                vEÍCULOSToolStripMenuItem.Enabled = true;
+                aRQUIVOToolStripMenuItem.Enabled = true;
                 groupBox1.Visible = false;
             }
             else
@@ -68,13 +72,12 @@ namespace seguradora
         {
             txtkey.Clear();
             txtnomeacesso.Clear();
-            
 
         }
 
         private void cADASTRARToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Acidente novo = new Acidente();
+            CadastrodeAcidente novo = new CadastrodeAcidente();
             novo.Show();
         }
 
@@ -100,6 +103,39 @@ namespace seguradora
 			ConsultaCarro novo = new ConsultaCarro();
 			novo.Show();
 		}
-	}
-    }
 
+        private void cADASTROToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_de_cliente novo = new Cadastro_de_cliente();
+            novo.Show();
+        }
+
+        private void sAIRToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialog_result = MessageBox.Show("Deseja sair?", "Fechar Sistema", MessageBoxButtons.YesNo);
+            if (dialog_result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void cADASTROCORRETORToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroCorretor novo = new CadastroCorretor();
+            novo.Show();
+        }
+
+        private void sOBREToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Empresa novo = new Empresa();
+            novo.Show();
+        }
+
+        private void cONSULTACORRETORToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCorretor novo = new ConsultaCorretor();
+            novo.Show();
+        }
+    }
+    }
+  

@@ -73,6 +73,26 @@ namespace seguradora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_insert_new_17850 {
+            get {
+                object obj = ResourceManager.GetObject("add_insert_new_17850", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_insert_new_178501 {
+            get {
+                object obj = ResourceManager.GetObject("add_insert_new_178501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seguro {
             get {
                 object obj = ResourceManager.GetObject("seguro", resourceCulture);
